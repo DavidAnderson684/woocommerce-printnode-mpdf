@@ -13,6 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      github.workspace: woocommerce-printnode-mpdf
 
     - name: Validate composer.json and composer.lock
       run: composer validate
@@ -35,8 +36,9 @@ jobs:
       with:
         name: woocommerce-printnode-mpdf
         path: |
-          ./
-          !./.git/
+          ./woocommerce-printnode-mpdf/
+          !./**/.git/
+          !./**/.github/
           !./**/ttfonts/AboriginalSansREGULAR.ttf
           !./**/ttfonts/Abyssinica_SIL.ttf
           !./**/ttfonts/Aegean.otf
