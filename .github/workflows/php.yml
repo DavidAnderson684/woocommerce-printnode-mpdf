@@ -33,7 +33,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: woocommerce-printnode-mpdf.zip
+        name: woocommerce-printnode-mpdf
         path: |
           ./
           !./**/ttfonts/AboriginalSansREGULAR.ttf
