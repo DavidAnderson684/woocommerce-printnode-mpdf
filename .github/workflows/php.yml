@@ -34,7 +34,59 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: woocommerce-printnode-mpdf.zip
-        path: ./
+        path: |
+          ./
+		  !./**/ttfonts/AboriginalSansREGULAR.ttf
+		  !./**/ttfonts/Abyssinica_SIL.ttf
+		  !./**/ttfonts/Aegean.otf
+		  !./**/ttfonts/Aegyptus.otf
+		  !./**/ttfonts/Akkadian.otf
+		  !./**/ttfonts/ayar.ttf
+		  !./**/ttfonts/damase_v.2.ttf
+		  !./**/ttfonts/DBSILBR.ttf
+		  !./**/ttfonts/Dhyana-Bold.ttf
+		  !./**/ttfonts/DhyanaOFL.txt
+		  !./**/ttfonts/Dhyana-Regular.ttf
+		  !./**/ttfonts/FreeMonoBoldOblique.ttf
+		  !./**/ttfonts/FreeMonoBold.ttf
+		  !./**/ttfonts/FreeMonoOblique.ttf
+		  !./**/ttfonts/FreeMono.ttf
+		  !./**/ttfonts/FreeSansBoldOblique.ttf
+		  !./**/ttfonts/FreeSansBold.ttf
+		  !./**/ttfonts/FreeSansOblique.ttf
+		  !./**/ttfonts/FreeSans.ttf
+		  !./**/ttfonts/FreeSerifBoldItalic.ttf
+		  !./**/ttfonts/FreeSerifBold.ttf
+		  !./**/ttfonts/FreeSerifItalic.ttf
+		  !./**/ttfonts/FreeSerif.ttf
+		  !./**/ttfonts/Jomolhari-OFL.txt
+		  !./**/ttfonts/Jomolhari.ttf
+		  !./**/ttfonts/kaputaunicode.ttf
+		  !./**/ttfonts/KhmerOFL.txt
+		  !./**/ttfonts/KhmerOS.ttf
+		  !./**/ttfonts/lannaalif-v1-03.ttf
+		  !./**/ttfonts/Lateef
+		  !./**/ttfonts/LateefRegOT.ttf
+		  !./**/ttfonts/LohitKannadaOFL.txt
+		  !./**/ttfonts/Lohit-Kannada.ttf
+		  !./**/ttfonts/ocrb10.ttf
+		  !./**/ttfonts/ocrbinfo.txt
+		  !./**/ttfonts/Padauk-book.ttf
+		  !./**/ttfonts/Pothana2000.ttf
+		  !./**/ttfonts/Quivira.otf
+		  !./**/ttfonts/SundaneseUnicode-1.0.5.ttf
+		  !./**/ttfonts/Sun-ExtA.ttf
+		  !./**/ttfonts/Sun-ExtB.ttf
+		  !./**/ttfonts/SyrCOMEdessa_license.txt
+		  !./**/ttfonts/SyrCOMEdessa.otf
+		  !./**/ttfonts/TaameyDavidCLM-LICENSE.txt
+		  !./**/ttfonts/TaameyDavidCLM-Medium.ttf
+		  !./**/ttfonts/TaiHeritagePro.ttf
+		  !./**/ttfonts/TharlonOFL.txt
+		  !./**/ttfonts/Tharlon-Regular.ttf
+		  !./**/ttfonts/Uthman.otf
+		  !./**/ttfonts/XW
+		  !./**/ttfonts/ZawgyiOne.ttf
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
