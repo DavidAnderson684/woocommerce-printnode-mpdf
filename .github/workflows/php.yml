@@ -34,7 +34,8 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: woocommerce-printnode-mpdf
-        path: ${{ github.workspace }}
+        path: |
+          ..
           !./**/.git/
           !./**/.github/
           !./**/ttfonts/AboriginalSansREGULAR.ttf
