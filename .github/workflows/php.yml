@@ -36,6 +36,7 @@ jobs:
         name: woocommerce-printnode-mpdf
         path: |
           ./
+          !./.git/
           !./**/ttfonts/AboriginalSansREGULAR.ttf
           !./**/ttfonts/Abyssinica_SIL.ttf
           !./**/ttfonts/Aegean.otf
