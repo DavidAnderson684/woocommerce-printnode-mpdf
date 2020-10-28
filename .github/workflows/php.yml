@@ -17,20 +17,24 @@ jobs:
         path: woocommerce-printnode-mpdf
     
     - name: Validate composer.json and composer.lock
-      run: composer validate
+      run: |
+        cd woocommerce-printnode-mpdf
+        composer validate
 
     - name: Cache Composer packages
       id: composer-cache
       uses: actions/cache@v2
       with:
-        path: vendor
+        path: woocommerce-printnode-mpdf/vendor
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-php-
 
     - name: Install dependencies
       if: steps.composer-cache.outputs.cache-hit != 'true'
-      run: composer install --prefer-dist --no-progress --no-suggest
+      run: |
+        cd woocommerce-printnode-mpdf
+        composer install --prefer-dist --no-progress --no-suggest
       
     - name: Upload artifact
       uses: actions/upload-artifact@v2
