@@ -35,7 +35,7 @@ jobs:
       with:
         name: woocommerce-printnode-mpdf
         path: |
-          ..
+          ${{ github.workspace }}
           !./**/.git/
           !./**/.github/
           !./**/ttfonts/AboriginalSansREGULAR.ttf
