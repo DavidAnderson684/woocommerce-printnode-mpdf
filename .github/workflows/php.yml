@@ -29,6 +29,12 @@ jobs:
     - name: Install dependencies
       if: steps.composer-cache.outputs.cache-hit != 'true'
       run: composer install --prefer-dist --no-progress --no-suggest
+      
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: woocommerce-printnode-mpdf.zip
+        path: ./
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
