@@ -13,7 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      github.workspace: woocommerce-printnode-mpdf
 
     - name: Validate composer.json and composer.lock
       run: composer validate
@@ -35,8 +34,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: woocommerce-printnode-mpdf
-        path: |
-          ./woocommerce-printnode-mpdf/
+        path: ${{ github.workspace }}
           !./**/.git/
           !./**/.github/
           !./**/ttfonts/AboriginalSansREGULAR.ttf
