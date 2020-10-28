@@ -13,6 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      working-directory: woocommerce-printnode-mpdf
 
     - name: Validate composer.json and composer.lock
       run: composer validate
