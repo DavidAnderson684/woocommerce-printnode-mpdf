@@ -5,6 +5,6 @@
 	"prefer-stable": true,
 	"require": {
 		"mpdf/mpdf": "^8.0",
-		"afragen/github-updater": "^9.9"
+		"afragen/wp-dependency-installer": "^3.0"
 	}
 }

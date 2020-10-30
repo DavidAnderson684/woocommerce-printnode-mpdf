@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/DavidAnderson684/woocommerce-printnode-mpdf
  * GitHub Plugin URI: https://github.com/DavidAnderson684/woocommerce-printnode-mpdf
  * Description: Use the mPDF engine for producing PDF files
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: David Anderson
  * Author URI: https://www.simbahosting.co.uk/s3/shop/
  * License: MIT
@@ -23,15 +23,26 @@ class WooCommerce_Simba_PrintOrders_MPDF {
 	 * Plugin constructor
 	 */
 	public function __construct() {
+	
 		add_filter('woocommerce_printorders_'.$this::ID.'_html_to_pdf_result', array($this, 'html_to_pdf_result'), 10, 3);
-		add_filter('woocommerce_printorders_'.$this::ID.'_internal_options_mpdf_notice', array($this, 'internal_options_mpdf_notice'));
-	}
+		
+		add_filter('woocommerce_printorders_'.$this::ID.'_internal_options_mpdf_notice', function() { return __('The PDF will be created by the mPDF engine (the associated plugin is installed and active).', 'woocommerce-printorders').'</br>'; });
+		
+		require_once __DIR__ . '/vendor/autoload.php';
+		
+		// Sanity check for version >= 3.0
+		if (!method_exists('WP_Dependency_Installer', 'json_file_decode')) {
+		add_action('admin_notices', function() {
+				$class = 'notice notice-error is-dismissible';
+				$label = __('WooCommerce PrintNode mPDF engine', 'woocommerce-printorders');
+				$file = (new ReflectionClass('WP_Dependency_Installer'))->getFilename();
+				$message = __('Another theme or plugin is using a previous version of the WP Dependency Installer library, please update this file and try again:', 'group-plugin-installer');
+				printf('<div class="%1$s"><p><strong>[%2$s]</strong> %3$s</p><pre>%4$s</pre></div>', esc_attr($class), esc_html($label), esc_html($message), esc_html($file));
+			}, 1);
+			return false;
+		}
+		WP_Dependency_Installer::instance(__DIR__)->run();
 
-	/**
-	 * Output visual information in the settings
-	 */
-	public function internal_options_mpdf_notice() {
-		return __('The PDF will be created by the mPDF engine (the associated plugin is installed and active).', 'woocommerce-printorders').'</br>';
 	}
 	
 	/**
