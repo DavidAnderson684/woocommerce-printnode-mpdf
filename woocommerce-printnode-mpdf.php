@@ -32,7 +32,7 @@ class WooCommerce_Simba_PrintOrders_MPDF {
 		
 		// Sanity check for version >= 3.0
 		if (!method_exists('WP_Dependency_Installer', 'json_file_decode')) {
-		add_action('admin_notices', function() {
+			add_action('admin_notices', function() {
 				$class = 'notice notice-error is-dismissible';
 				$label = __('WooCommerce PrintNode mPDF engine', 'woocommerce-printorders');
 				$file = (new ReflectionClass('WP_Dependency_Installer'))->getFilename();
