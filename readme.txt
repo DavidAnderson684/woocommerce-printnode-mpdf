@@ -19,10 +19,11 @@ PHP >= 5.6.0 is required (reflecting the versions supported by the mPDF library)
 
 == Changelog ==
 
-= 1.0.2 - 2020/10/30 =
+= 1.0.3 - 2020/10/30 =
 
 * TWEAK: Include afragen/wp-dependency-installer to advise installing Github updater; exclude incorrectly bundled updater plugin
 * TWEAK: Do not exclude FreeSans.ttf from build artifact
+* TWEAK: Fix some Github build issues
 
 = 1.0.0 - 2020/10/28 =
 
