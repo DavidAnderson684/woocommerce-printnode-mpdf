@@ -62,7 +62,6 @@ jobs:
           !./**/ttfonts/FreeSansBoldOblique.ttf
           !./**/ttfonts/FreeSansBold.ttf
           !./**/ttfonts/FreeSansOblique.ttf
-          !./**/ttfonts/FreeSans.ttf
           !./**/ttfonts/FreeSerifBoldItalic.ttf
           !./**/ttfonts/FreeSerifBold.ttf
           !./**/ttfonts/FreeSerifItalic.ttf

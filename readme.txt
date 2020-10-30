@@ -19,6 +19,10 @@ PHP >= 5.6.0 is required (reflecting the versions supported by the mPDF library)
 
 == Changelog ==
 
+= 1.0.1 - 2020/10/30 =
+
+* TWEAK: Do not exclude FreeSans.ttf from build artifact
+
 = 1.0.0 - 2020/10/28 =
 
 * RELEASE: First version
