@@ -1,7 +1,7 @@
 === WooCommerce Print Orders mPDF engine for PrintNode ===
 Contributors: David Anderson
 Requires at least: 4.5
-Tested up to: 5.5
+Tested up to: 5.6
 License: MIT
 Requires PHP: 5.6
 
