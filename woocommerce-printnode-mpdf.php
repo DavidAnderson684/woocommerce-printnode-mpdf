@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/DavidAnderson684/woocommerce-printnode-mpdf
  * GitHub Plugin URI: https://github.com/DavidAnderson684/woocommerce-printnode-mpdf
  * Description: Use the mPDF engine for producing PDF files
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: David Anderson
  * Author URI: https://www.simbahosting.co.uk/s3/shop/
  * License: MIT

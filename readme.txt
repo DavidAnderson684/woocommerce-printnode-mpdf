@@ -19,6 +19,10 @@ PHP >= 5.6.0 is required (reflecting the versions supported by the mPDF library)
 
 == Changelog ==
 
+= 1.0.4 - 2021/01/27 =
+
+* TWEAK: Update bundled dependencies to current versions
+
 = 1.0.3 - 2020/10/30 =
 
 * TWEAK: Include afragen/wp-dependency-installer to advise installing Github updater; exclude incorrectly bundled updater plugin
