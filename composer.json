@@ -6,5 +6,8 @@
 	"require": {
 		"mpdf/mpdf": "^8.0",
 		"afragen/wp-dependency-installer": "^3.0"
+	},
+	"config": {
+		"platform-check": false
 	}
 }
