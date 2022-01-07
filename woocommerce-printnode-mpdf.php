@@ -55,7 +55,7 @@ class WooCommerce_Simba_PrintOrders_MPDF {
 	 * @return Boolean|String - filtered output
 	 */
 	public function html_to_pdf_result($result, $html, $options) {
-	
+
 		// If something else already got in, then pass it through
 		if (false !== $result) return $result;
 	
