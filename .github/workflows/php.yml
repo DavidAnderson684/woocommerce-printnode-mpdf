@@ -34,7 +34,7 @@ jobs:
       if: steps.composer-cache.outputs.cache-hit != 'true'
       run: |
         cd woocommerce-printnode-mpdf
-        composer install --prefer-dist --no-progress --no-suggest
+        composer install --prefer-dist --no-progress
       
     - name: Upload artifact
       uses: actions/upload-artifact@v2
