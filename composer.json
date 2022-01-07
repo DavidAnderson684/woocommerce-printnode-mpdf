@@ -5,7 +5,8 @@
 	"prefer-stable": true,
 	"require": {
 		"mpdf/mpdf": "^8.0",
-		"afragen/wp-dependency-installer": "^3.0"
+		"afragen/wp-dependency-installer": "^3.0",
+		"psr/log": "^1.1"
 	},
 	"config": {
 		"platform-check": false
