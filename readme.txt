@@ -1,7 +1,7 @@
 === WooCommerce Print Orders mPDF engine for PrintNode ===
 Contributors: David Anderson
 Requires at least: 4.5
-Tested up to: 5.9
+Tested up to: 6.1
 License: MIT
 Requires PHP: 5.6
 
@@ -18,6 +18,10 @@ PHP >= 5.6.0 is required (reflecting the versions supported by the mPDF library)
 1. Install and then activate this plugin via uploading it into WordPress's plugin installer (use the "Upload" tab). That is all. Once it is active, it is in use (you should be able to see this mentioned in the "Simple summary" section in the PrintNode settings).
 
 == Changelog ==
+
+= 1.1.0 - 2023/01/25 =
+
+* TWEAK: Update to mPDF 8.1.4, which adds PHP 8.2 support
 
 = 1.0.5 - 2021/03/25 =
 

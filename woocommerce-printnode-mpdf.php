@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/DavidAnderson684/woocommerce-printnode-mpdf
  * GitHub Plugin URI: https://github.com/DavidAnderson684/woocommerce-printnode-mpdf
  * Description: Use the mPDF engine for producing PDF files
- * Version: 1.0.5
+ * Version: 1.1.0
  * Author: David Anderson
  * Author URI: https://www.simbahosting.co.uk/s3/shop/
  * License: MIT
@@ -71,7 +71,6 @@ class WooCommerce_Simba_PrintOrders_MPDF {
 			'debug'				=> true,
 			'useSubstitutions'	=> file_exists(__DIR__ . '/vendor/mpdf/mpdf/ttfonts/FreeSans.ttf'),
 		));
-
 		error_clear_last();
 		$mpdf = new \Mpdf\Mpdf($mpdf_options);
 		$mpdf->WriteHTML($html);
